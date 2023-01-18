@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center align-items-center">
+  <div class="container-senha">
+    <div class="campo-senha mb-4">
+      <label for="Senha">Senha</label>
+      <app-campo-senha [esconderSenha]="esconderSenha" (valorInput)="obterValorInputSenha($event)"></app-campo-senha>
+    </div>
+    <div class="confirmar-senha">
+      <label for="ConfirmarSenha">Confirmar Senha</label>
+      <app-campo-senha [esconderSenha]="esconderConfirmacaoSenha" (valorInput)="obterValorInputConfirmarSenha($event)"></app-campo-senha>
+    </div>
+  </div>
+</div>
