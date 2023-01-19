@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CampoSenhaComponent } from './campo-senha.component';
+import { CampoSenhaComponent } from './field-input.component';
 
 describe('CampoSenhaComponent', () => {
   let component: CampoSenhaComponent;

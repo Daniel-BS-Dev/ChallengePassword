@@ -1,6 +1,0 @@
-<input [type]="esconderSenha  ? 'password' : 'text'" class="form-control"
-placeholder="Senha" #inputValor (keyup)="obterValorInput(inputValor)"
->
-<button mat-icon-button class="senha-olho" (click)="esconderSenha = !esconderSenha">
-  <mat-icon>{{esconderSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
-</button>

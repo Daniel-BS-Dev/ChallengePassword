@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+}
+
+.label {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 32px;
+}
+
+.has-error {
+  margin-left: 4px;
+  font-weight: 600;
+  color: #a60505;
+  margin-top: 3px;
+}
+
+.is-valid {
+  margin-left: 4px;
+  font-weight: 600;
+  color: #169e21;
+  margin-top: 3px;
+}

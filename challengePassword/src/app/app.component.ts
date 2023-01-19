@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +8,17 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
 
-  esconderSenha = false;
-  esconderConfirmacaoSenha = false;
+  hidePassword = false;
+  hideConfirmPassword = false;
 
-  valorCampoSenha = '';
-  valorCampoConfirmarSenha = '';
+  form!: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-
-  }
-
-  obterValorInputSenha(valueCampo: any) {
-    this.valorCampoSenha = valueCampo.value;
-    console.log(this.valorCampoSenha);
-  }
-
-  obterValorInputConfirmarSenha(valueCampo: any) {
-    this.esconderConfirmacaoSenha = valueCampo.value
-    console.log(this.esconderConfirmacaoSenha);
+    this.form = this.fb.group({
+      password: ['', [Validators.required]],
+      confirmPassword: ['', Validators.required],
+    });
   }
 }

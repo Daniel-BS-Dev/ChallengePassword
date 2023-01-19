@@ -1,0 +1,23 @@
+<div class="container">
+  <label class="label">{{ label }}</label>
+
+  <ng-content></ng-content>
+
+  <span *ngIf="hasSuccess()" class="d-flex align-items-center">
+    <mat-icon class="is-valid">check_circle</mat-icon>
+    <span class="is-valid">
+      Campo valido.
+    </span>
+  </span>
+
+  <span *ngIf="hasError()" class="d-flex align-items-center">
+    <mat-icon class="has-error">report</mat-icon>
+    <span class="has-error">
+      {{ errorMessage }}
+    </span>
+  </span>
+
+  <button mat-icon-button (click)="showDigit()">
+    <mat-icon>{{ !hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+</div>

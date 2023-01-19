@@ -1,12 +1,17 @@
-<div class="d-flex justify-content-center align-items-center">
-  <div class="container-senha">
-    <div class="campo-senha mb-4">
-      <label for="Senha">Senha</label>
-      <app-campo-senha [esconderSenha]="esconderSenha" (valorInput)="obterValorInputSenha($event)"></app-campo-senha>
-    </div>
-    <div class="confirmar-senha">
-      <label for="ConfirmarSenha">Confirmar Senha</label>
-      <app-campo-senha [esconderSenha]="esconderConfirmacaoSenha" (valorInput)="obterValorInputConfirmarSenha($event)"></app-campo-senha>
-    </div>
+<form [formGroup]="form" class="d-flex justify-content-center align-items-center">
+  <div class="container-inputs">
+    <app-field-input errorMessage="Campo obrigatorio." label="Senha" [hidePassword]="hidePassword"
+      (showPassword)="hidePassword = $event" class="col-12">
+      <input [type]="hidePassword ? 'text' : 'password'" class="form-control" formControlName="password"
+        placeholder="Digite a senha">
+    </app-field-input>
+
+    <app-field-input errorMessage="Campo obrigatorio." label="Confirmar senha" [hidePassword]="hideConfirmPassword"
+      (showPassword)="hideConfirmPassword = $event" class="col-12 my-4">
+      <input [type]="hideConfirmPassword ? 'text' : 'password'" class="form-control" formControlName="confirmPassword"
+        placeholder="Confirme a senha">
+    </app-field-input>
+
+    <button type="button" class="btn btn-primary col-7">Enviar</button>
   </div>
-</div>
+</form>

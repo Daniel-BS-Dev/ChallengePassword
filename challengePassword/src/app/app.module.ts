@@ -5,18 +5,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CampoSenhaComponent } from './components/campo-senha/campo-senha.component';
+import { FieldInputComponent } from './components/field-inpt/field-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CampoSenhaComponent,
+    FieldInputComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
